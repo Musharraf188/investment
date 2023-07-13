@@ -1,7 +1,16 @@
 import React from "react";
 
 const InvestForm =()=>{
-    return  <form className="form">
+    const submitHandler=(event)=>{
+        event.preventDefault();
+        //.. 
+        console.log('SUBMIT')
+    }
+    const clickHandler =()=>{
+        //..
+        console.log('RESET')
+    }
+    return  <form onSubmit={submitHandler} className="form">
     <div className="input-group">
       <p>
         <label htmlFor="current-savings">Current Savings ($)</label>
@@ -25,7 +34,7 @@ const InvestForm =()=>{
       </p>
     </div>
     <p className="actions">
-      <button type="reset" className="buttonAlt">
+      <button onClick={clickHandler} type="reset" className="buttonAlt">
         Reset
       </button>
       <button type="submit" className="button">
