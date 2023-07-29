@@ -1,7 +1,6 @@
-import logo from './assets/investment-calculator-logo.png';
 import Header from './components/Header';
 import UserTable from './components/UserTable';
-import NewForm from './components/newForm';
+import NewForm from './components/NewForm';
 
 function App() {
   const calculateHandler = (userInput) => {
