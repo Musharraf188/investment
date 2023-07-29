@@ -3,11 +3,12 @@ const intialInput ={'current-savings':10000,
 'yearly-contribution':1200,
 'expected-return':7,
 'duration':12}
-const NewForm =()=>{
+const NewForm =(props)=>{
    const [userInput, setInput] =  useState(intialInput);
     const submitHandler =(event)=>{
 event.preventDefault();
 console.log('SUBMIT');
+props.onCalculate(userInput)
     }
 const resetHandler =()=>{
   setInput(intialInput);
