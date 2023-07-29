@@ -7,7 +7,7 @@ const resetHandler =()=>{
     console.log('RESET');
 }
 const inputChangeHandler =(identifier, value)=>{
-    console.log(identifier, value)
+    console.log(identifier, va)
 }
     return  <form onSubmit={submitHandler} className="form">
     <div className="input-group">
