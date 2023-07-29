@@ -2,13 +2,13 @@ import React, { useState } from "react";
 const intialState={
   'current-savings':10000,
   'yearly-contribution':1200,
-  'expected-return': 7,
+  'expected-return':7,
   'duration':10
 }
  
 const InvestForm =()=>{
   const [userInput, setUserInput] = useState(intialState);
-    const submitHandler=(event)=>{
+    const submitHandler=(event )=>{
         event.preventDefault();
         //.. 
         console.log('SUBMIT');
@@ -16,6 +16,7 @@ const InvestForm =()=>{
     const resetHandler =()=>{
       setUserInput(intialState);
         console.log('RESET')
+        //..
     }
     const inputHandler=(index, value)=>{
   setUserInput((prevValue)=>{
