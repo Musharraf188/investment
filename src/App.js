@@ -41,7 +41,7 @@ setInput(Input)
      <Header />
      <NewForm  onCalculate={calculateHandler}/>
      {!userInput && <p>No Investment found.</p>}
-    {userInput &&  <UserTable />}
+    {userInput &&  <UserTable data={yearlyData}/>}
       {/* Todo: Show below table conditionally (only once result data is available) */}
       {/* Show fallback text if no data is available */}
       </div>)
