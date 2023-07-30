@@ -1,4 +1,6 @@
 import { useState } from "react";
+
+import classes from './UserForm.module.css'
 const intialInput ={
     'current-savings':10000,
     'yearly-contribution': 1200,
@@ -27,8 +29,8 @@ const resetHandler =()=>{
     }
 
 
-    return  <form onSubmit={submitHandler} className="form">
-    <div className="input-group">
+    return  <form className={classes.form} onSubmit={submitHandler} >
+    <div className={classes['input-group']}>
       <p>
         <label htmlFor="current-savings">Current Savings ($)</label>
         <input value={userInput['current-savings']} onChange={(event)=>InputCahngeHandler('current-savings', event.target.value )}type="number" id="current-savings" />
@@ -38,7 +40,7 @@ const resetHandler =()=>{
         <input value={userInput['yearly-contribution']} onChange={(event)=>InputCahngeHandler('yearly-contribution', event.target.value )} type="number" id="yearly-contribution" />
       </p>
     </div>
-    <div className="input-group">
+    <div className={classes['input-group']}>
       <p>
         <label htmlFor="expected-return">
           Expected Interest (%, per year)
@@ -50,7 +52,7 @@ const resetHandler =()=>{
         <input value={userInput['duration']} onChange={(event)=>InputCahngeHandler('duration', event.target.value )} type="number" id="duration" />
       </p>
     </div>
-    <p className="actions">
+    <p className={classes.actions}>
       <button onClick={resetHandler}  type="reset" className="buttonAlt">
         Reset
       </button>
