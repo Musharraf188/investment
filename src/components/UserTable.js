@@ -10,15 +10,15 @@ const UserTable =(props)=>{
       </tr>
     </thead>
     <tbody>
-     {props.data.map(yearlyData=>{
+     {props.data.map((yearlyData)=>(
        <tr>
        <td>{yearlyData.year}</td>
        <td>{yearlyData.savingsEndOfYear}</td>
        <td>{yearlyData.yearlyInterest}</td>
-       <td>TOTAL INTEREST GAINED</td>
-       <td>TOTAL INVESTED CAPITAL</td>
+       <td>{yearlyData.savingsEndOfYear- props.initialInvesment - yearlyData.yearlyContribution * yearlyData.year}</td>
+       <td>{props.initialInvesment + yearlyData.yearlyContribution * yearlyData.year}</td>
      </tr>
-     })}
+     ))}
      
     </tbody>
   </table>
