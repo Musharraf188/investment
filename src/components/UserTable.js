@@ -14,8 +14,8 @@ const UserTable =(props)=>{
         <td>{yearlyData.year}</td>
         <td>{yearlyData.savingsEndOfYear}</td>
         <td>{yearlyData.yearlyContribution}</td>
-        <td>{}</td>
-        <td>TOTAL INVESTED CAPITAL</td>
+        <td>{yearlyData.savingsEndOfYear - props.intialInvestment - yearlyData.yearlyContribution * yearlyData.year}</td>
+        <td>{props.intialInvestment+ yearlyData.yearlyContribution *yearlyData.year}</td>
       </tr>)}
       
     </tbody>

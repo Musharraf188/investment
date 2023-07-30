@@ -4,7 +4,7 @@ import UserForm from './components/UserForm';
 import UserTable from './components/UserTable';
 
 function App() {
-  const [userInput, setInput] = useState();
+  const [userInput, setInput] = useState(null);
   const calculateHandler = (Input) => {
     // Should be triggered when form is submitted
     // You might not directly want to bind it to the submit event on the form though...
@@ -40,7 +40,8 @@ if(userInput){
      <UserForm  onCalculate={calculateHandler}/>
       {/* Todo: Show below table conditionally (only once result data is available) */}
       {/* Show fallback text if no data is available */}
-    <UserTable  data={yearlyData}/>
+    {userInput && <UserTable  data={yearlyData} intialInvestment={userInput['current-savings']}/>}
+    {!userInput && <p>No investment found.</p>}
        </div>
   );
 }
