@@ -1,6 +1,5 @@
 import { useState } from "react";
-
-import classes from './UserForm.module.css'
+import classes from './UserFrom.module.css'
 const intialInput ={
     'current-savings':10000,
     'yearly-contribution': 1200,

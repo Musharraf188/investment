@@ -41,7 +41,7 @@ if(userInput){
       {/* Todo: Show below table conditionally (only once result data is available) */}
       {/* Show fallback text if no data is available */}
     {userInput && <UserTable  data={yearlyData} intialInvestment={userInput['current-savings']}/>}
-    {!userInput && <p>No investment found.</p>}
+    { !userInput && <p style={{textAlign:'center'}}>No investment found.</p>}
        </div>
   );
 }
