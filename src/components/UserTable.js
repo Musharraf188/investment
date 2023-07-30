@@ -1,7 +1,9 @@
+import claases from './UserForm.module.css'
+
 const UserTable =(props)=>{
-    return  <table className="result">
+    return  <table className={claases.form}>
     <thead>
-      <tr>
+      <tr className={claases['input-group']}>
         <th>Year</th>
         <th>Total Savings</th>
         <th>Interest (Year)</th>
