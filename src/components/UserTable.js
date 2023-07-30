@@ -1,5 +1,5 @@
-const UserTable =(props)=>{
-    return <table className="result">
+const UserTable =()=>{
+    return  <table className="result">
     <thead>
       <tr>
         <th>Year</th>
@@ -10,19 +10,16 @@ const UserTable =(props)=>{
       </tr>
     </thead>
     <tbody>
-     {props.data.map((yearlyData)=>(
-       <tr>
-       <td>{yearlyData.year}</td>
-       <td>{yearlyData.savingsEndOfYear}</td>
-       <td>{yearlyData.yearlyInterest}</td>
-       <td>{yearlyData.savingsEndOfYear- props.initialInvesment - yearlyData.yearlyContribution * yearlyData.year}</td>
-       <td>{props.initialInvesment + yearlyData.yearlyContribution * yearlyData.year}</td>
-     </tr>
-     ))}
-     
+      <tr>
+        <td>YEAR NUMBER</td>
+        <td>TOTAL SAVINGS END OF YEAR</td>
+        <td>INTEREST GAINED IN YEAR</td>
+        <td>TOTAL INTEREST GAINED</td>
+        <td>TOTAL INVESTED CAPITAL</td>
+      </tr>
     </tbody>
   </table>
 
-      }
+}
 
 export default UserTable;
