@@ -1,6 +1,6 @@
-
+import classes from './UserTable.module.css'
 const UserTable =(props)=>{
-    return  <table >
+    return  <table className={classes.result} >
     <thead>
       <tr >
         <th>Year</th>
