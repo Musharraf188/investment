@@ -16,7 +16,11 @@ props.onCalculate(userInput);
 setInput((prevValue)=>{
     return {...prevValue, [identifier]:+value}
 })
-    }
+}
+
+const resetHandler =()=>{
+   setInput(intialContent);
+}
     return <form onSubmit={submitHandler} className="form">
     <div className="input-group">
       <p>
@@ -25,7 +29,7 @@ setInput((prevValue)=>{
       </p>
       <p>
         <label htmlFor="yearly-contribution">Yearly Savings ($)</label>
-        <input value={userInput['yearly-contribution']} type="number" id="yearly-contribution" />
+        <input value={userInput['yearly-contribution']} onChange={(event) =>{inputHandler('yearly-contribution', event.target.value)}} type="number" id="yearly-contribution" />
       </p>
     </div>
     <div className="input-group">
@@ -33,15 +37,15 @@ setInput((prevValue)=>{
         <label htmlFor="expected-return">
           Expected Interest (%, per year)
         </label>
-        <input  value={userInput['expected-return']} type="number" id="expected-return" />
+        <input  value={userInput['expected-return']} onChange={(event) =>{inputHandler('expected-return', event.target.value)}} type="number" id="expected-return" />
       </p>
       <p>
         <label htmlFor="duration">Investment Duration (years)</label>
-        <input value={userInput['duration']} type="number" id="duration" />
+        <input value={userInput['duration']} onChange={(event) =>{inputHandler('duration', event.target.value)}} type="number" id="duration" />
       </p>
     </div>
     <p className="actions">
-      <button type="reset" className="buttonAlt">
+      <button onClick={resetHandler} type="reset" className="buttonAlt">
         Reset
       </button>
       <button type="submit" className="button">
