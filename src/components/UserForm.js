@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const UserForm =()=>{
+const UserForm =(props)=>{
     const intialContent={
         'current-savings':10000,
         'yearly-contribution':1200,
@@ -10,6 +10,7 @@ const UserForm =()=>{
     const [userInput, setInput] = useState(intialContent);
     const submitHandler =(event)=>{
 event.preventDefault();
+props.onCalculate(userInput);
     }
     const inputHandler =(identifier, value)=>{
 setInput((prevValue)=>{
