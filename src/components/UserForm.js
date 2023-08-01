@@ -25,7 +25,7 @@ const resetHandler =()=>{
     <div className="input-group">
       <p>
         <label htmlFor="current-savings">Current Savings ($)</label>
-        <input value={userInput['current-savings']} onChange={(event) =>{inputHandler('current-savings', event.target.value)}} type="number" id="current-savings" />
+        <input value={userInput['current-savings']} onChange={(event)=>{inputHandler('current-savings', event.target.value)}} type="number" id="current-savings" />
       </p>
       <p>
         <label htmlFor="yearly-contribution">Yearly Savings ($)</label>
