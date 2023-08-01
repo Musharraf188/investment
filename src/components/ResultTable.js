@@ -11,9 +11,9 @@ const ResultTable =(props)=>{
     </thead>
     <tbody>
         {props.data.map(yearlyData=> <tr>
-        <td>{yearlyData.yearlyContribution}</td>
-        <td>TOTAL SAVINGS END OF YEAR</td>
-        <td>INTEREST GAINED IN YEAR</td>
+        <td>{yearlyData.year}</td>
+        <td>{yearlyData.savingsEndOfYear}</td>
+        <td>{yearlyData.yearlyInterest}</td>
         <td>TOTAL INTEREST GAINED</td>
         <td>TOTAL INVESTED CAPITAL</td>
       </tr>)}
