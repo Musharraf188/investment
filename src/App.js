@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import logo from './assets/investment-calculator-logo.png';
 import Header from './components/Header';
 import ResultTable from './components/ResultTable';
 import UserForm from './components/UserForm';
